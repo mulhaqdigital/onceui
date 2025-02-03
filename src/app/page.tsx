@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 
 import {
   Heading,
@@ -226,770 +226,501 @@ export default function Home() {
           />
           <Column fillWidth horizontal="center" gap="32" padding="32" position="relative">
             <InlineCode radius="xl" shadow="m" fit paddingX="16" paddingY="8">
-              Start by editing
+              Join our community
               <Text onBackground="brand-medium" marginLeft="8">
-                app/page.tsx
+                Start coding today
               </Text>
             </InlineCode>
-            <Heading wrap="balance" variant="display-default-l" align="center" marginBottom="16">
-              Test 3
+            
+            <Heading 
+              wrap="balance" 
+              variant="display-default-l" 
+              align="center" 
+              marginBottom="16"
+            >
+              Empowering the Next Generation of Coders and Innovators
             </Heading>
-            <Button
-              id="readDocs"
-              target="_blank"
-              label="Open docs"
-              href="https://once-ui.com/docs"
-              variant="secondary"
-              arrowIcon
-            />
-            <Column horizontal="center" paddingTop="64" fillWidth gap="24">
-              <Line maxWidth={4} marginBottom="16" background="neutral-alpha-medium" />
-              <AvatarGroup
-                marginBottom="8"
-                reverse
-                size="s"
-                avatars={[
-                  {
-                    src: "/images/l.jpg",
-                  },
-                  {
-                    src: "/images/z.jpg",
-                  },
-                ]}
-              />
-              <Heading marginBottom="12" as="h2" align="center" variant="heading-default-l">
-                Brought to you by indie creators
-                <br /> behind stellar projects:
-              </Heading>
-              <LogoCloud
-                paddingBottom="104"
-                columns="3"
-                mobileColumns="1"
-                limit={3}
-                fillWidth
-                logos={[
-                  {
-                    icon: false,
-                    wordmarkSrc: "/trademark/dopler-wordmark.svg",
-                    href: "https://dropler.app",
-                    size: "m",
-                  },
-                  {
-                    icon: false,
-                    wordmarkSrc: "/trademark/design-engineers-wordmark.svg",
-                    href: "https://club.dropler.io",
-                    size: "m",
-                  },
-                  {
-                    icon: false,
-                    wordmarkSrc: "/trademark/enroll-wordmark.svg",
-                    href: "https://enroll.dopler.app",
-                    size: "m",
-                  },
-                  {
-                    icon: false,
-                    wordmarkSrc: "/trademark/magic-portfolio-wordmark.svg",
-                    href: "https://magic-portfolio.com",
-                    size: "m",
-                  },
-                ]}
-              />
-            </Column>
-          </Column>
-          <Column fillWidth paddingX="32" gap="12" horizontal="center" position="relative">
-            <Heading as="h2" variant="display-default-m">
-              Showcase
-            </Heading>
-            <Text marginBottom="32" align="center" onBackground="neutral-weak">
-              Tiny snippets to inspire your next project
+
+            <Text 
+              align="center" 
+              variant="body-default-l" 
+              onBackground="neutral-medium"
+              style={{ maxWidth: '36rem' }}
+              marginBottom="32"
+            >
+              Deta is a non-profit, community-driven initiative dedicated to helping students and 
+              professionals learn coding, develop digital skills, and create applications that solve 
+              real-world problems.
             </Text>
 
-            {/* LOGIN */}
-            <Row
-              marginY="32"
-              background="overlay"
-              fillWidth
-              radius="xl"
-              border="neutral-alpha-weak"
-              overflow="hidden"
-            >
-              <Row fill hide="m">
-                <SmartImage src="/images/login.png" alt="Preview image" sizes="560px" />
-              </Row>
-              <Column fillWidth horizontal="center" gap="20" padding="32" position="relative">
-                <Background
-                  mask={{
-                    x: 100,
-                    y: 0,
-                    radius: 75,
-                  }}
-                  position="absolute"
-                  grid={{
-                    display: true,
-                    opacity: 50,
-                    width: "0.5rem",
-                    color: "neutral-alpha-medium",
-                    height: "1rem",
-                  }}
-                />
-                <Logo wordmark={false} size="l" />
-                <Heading as="h3" variant="display-default-s">
-                  Welcome to Once UI
-                </Heading>
-                <Text onBackground="neutral-medium" marginBottom="24">
-                  Log in or
-                  <SmartLink href="/">sign up</SmartLink>
-                </Text>
-                <Column fillWidth gap="8">
-                  <Button
-                    label="Continue with Google"
-                    fillWidth
-                    variant="secondary"
-                    weight="default"
-                    prefixIcon="google"
-                    size="l"
-                  />
-                  <Button
-                    label="Continue with GitHub"
-                    fillWidth
-                    variant="secondary"
-                    weight="default"
-                    prefixIcon="github"
-                    size="l"
-                  />
-                </Column>
-                <Row fillWidth paddingY="24">
-                  <Row onBackground="neutral-weak" fillWidth gap="24" vertical="center">
-                    <Line />/<Line />
-                  </Row>
-                </Row>
-                <Column gap="-1" fillWidth>
-                  <Input
-                    id="email"
-                    label="Email"
-                    labelAsPlaceholder
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                    validate={validateLogin}
-                    errorMessage={false}
-                    radius="top"
-                  />
-                  <PasswordInput
-                    autoComplete="new-password"
-                    id="password"
-                    label="Password"
-                    labelAsPlaceholder
-                    radius="bottom"
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
-                    validate={validateLogin}
-                  />
-                </Column>
-                <Button
-                  id="login"
-                  label="Log in"
-                  arrowIcon
-                  fillWidth
-                  onClick={() => {
-                    addToast({
-                      variant: "success",
-                      message: "Wohoo! It's a toast!",
-                    });
-                  }}
-                />
-              </Column>
+            <Row gap="16">
+              <Button
+                label="Join the Community"
+                variant="primary"
+                size="l"
+                arrowIcon
+              />
+              <Button
+                label="Explore Projects" 
+                variant="secondary"
+                size="l"
+              />
+              <Button
+                label="Learn to Code"
+                variant="secondary" 
+                size="l"
+              />
             </Row>
+
+            {/* Why Deta Section */}
+            <Column horizontal="center" paddingTop="104" fillWidth gap="48">
+              <Heading as="h2" variant="display-default-m" align="center">
+                Why Deta?
+              </Heading>
+              
+              <Row wrap={true} gap="32" fillWidth>
+                <Card padding="32" fillWidth>
+                  <Column gap="16">
+                    <Icon name="gift" size="l" />
+                    <Heading as="h3" variant="heading-default-m">
+                      Free and Accessible
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      Everyone deserves the opportunity to learn coding, regardless of background.
+                    </Text>
+                  </Column>
+                </Card>
+
+                <Card padding="32" fillWidth>
+                  <Column gap="16">
+                    <Icon name="users" size="l" />
+                    <Heading as="h3" variant="heading-default-m">
+                      Community-Powered
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      Learn and grow with a supportive network of peers and mentors.
+                    </Text>
+                  </Column>
+                </Card>
+
+                <Card padding="32" fillWidth>
+                  <Column gap="16">
+                    <Icon name="target" size="l" />
+                    <Heading as="h3" variant="heading-default-m">
+                      Real-World Impact
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      Build applications that address social, environmental, and community challenges.
+                    </Text>
+                  </Column>
+                </Card>
+              </Row>
+            </Column>
+
+            {/* Impact Statistics Section */}
+            <Column 
+              horizontal="center" 
+              paddingTop="104" 
+              fillWidth 
+              gap="48"
+              background="surface"
+              padding="64"
+              border="neutral-alpha-weak"
+              radius="xl"
+            >
+              <Heading as="h2" variant="display-default-m" align="center">
+                Our Impact
+              </Heading>
+              
+              <Text 
+                align="center" 
+                variant="body-default-l" 
+                onBackground="neutral-medium"
+                marginBottom="32"
+              >
+                Since our inception, Deta has:
+              </Text>
+
+              <Row wrap={true} gap="32" fillWidth>
+                <Card padding="32" fillWidth background="page">
+                  <Column gap="8" horizontal="center">
+                    <Heading 
+                      as="h3"
+                      variant="display-default-xl" 
+                      align="center"
+                      onBackground="brand-strong"
+                    >
+                      10,000+
+                    </Heading>
+                    <Text align="center" onBackground="neutral-medium">
+                      Learners taught worldwide
+                    </Text>
+                  </Column>
+                </Card>
+
+                <Card padding="32" fillWidth background="page">
+                  <Column gap="8" horizontal="center">
+                    <Heading 
+                      as="h3" 
+                      variant="display-default-xl" 
+                      align="center"
+                      onBackground="brand-strong"
+                    >
+                      500+
+                    </Heading>
+                    <Text align="center" onBackground="neutral-medium">
+                      Real-world projects developed
+                    </Text>
+                  </Column>
+                </Card>
+
+                <Card padding="32" fillWidth background="page">
+                  <Column gap="8" horizontal="center">
+                    <Heading 
+                      as="h3" 
+                      variant="display-default-xl" 
+                      align="center"
+                      onBackground="brand-strong"
+                    >
+                      25
+                    </Heading>
+                    <Text align="center" onBackground="neutral-medium">
+                      Hackathons and community events
+                    </Text>
+                  </Column>
+                </Card>
+
+                <Card padding="32" fillWidth background="page">
+                  <Column gap="8" horizontal="center">
+                    <Heading 
+                      as="h3" 
+                      variant="display-default-xl" 
+                      align="center"
+                      onBackground="brand-strong"
+                    >
+                      15
+                    </Heading>
+                    <Text align="center" onBackground="neutral-medium">
+                      Partner organizations
+                    </Text>
+                  </Column>
+                </Card>
+              </Row>
+            </Column>
+
+            {/* Project Categories Section */}
+            <Column 
+              horizontal="center" 
+              paddingTop="104" 
+              fillWidth 
+              gap="64"
+              background="surface"
+              padding="80"
+              border="neutral-alpha-weak"
+              radius="xl"
+              position="relative"
+            >
+              <Background
+                mask={{
+                  x: 0,
+                  y: 0,
+                }}
+                position="absolute"
+                grid={{
+                  display: true,
+                  color: "neutral-alpha-medium",
+                  width: "2rem",
+                  height: "2rem",
+                  opacity: 20
+                }}
+              />
+
+              <Column gap="24" horizontal="center">
+                <Heading as="h2" variant="display-default-l" align="center">
+                  Project Categories
+                </Heading>
+                <Text 
+                  align="center" 
+                  variant="body-default-l" 
+                  onBackground="neutral-medium"
+                  style={{ maxWidth: '32rem' }}
+                >
+                  Browse projects by category to find inspiration or contribute to a cause you care about.
+                </Text>
+              </Column>
+
+              <Row wrap={true} gap="40" fillWidth maxWidth="xl">
+                {/* Education Card */}
+                <Card 
+                  key="education"
+                  padding="48" 
+                  fillWidth 
+                  background="page"
+                  border="neutral-alpha-weak"
+                  radius="l"
+                  style={{ flex: '1 1 calc(50% - 20px)' }}
+                >
+                  <Column gap="32">
+                    <Row horizontal="space-between" vertical="center">
+                      <Icon name="book" size="xl" onBackground="brand-strong" />
+                      <Button 
+                        variant="tertiary" 
+                        label="Browse Projects" 
+                        arrowIcon 
+                        size="s"
+                      />
+                    </Row>
+                    <Column gap="12">
+                      <Heading as="h3" variant="display-default-s">
+                        Education
+                      </Heading>
+                      <Text 
+                        variant="body-default-l"
+                        onBackground="neutral-medium"
+                      >
+                        Tools and platforms to enhance learning and teaching.
+                      </Text>
+                    </Column>
+                  </Column>
+                </Card>
+
+                {/* Healthcare Card */}
+                <Card 
+                  key="healthcare"
+                  padding="48" 
+                  fillWidth 
+                  background="page"
+                  border="neutral-alpha-weak"
+                  radius="l"
+                  style={{ flex: '1 1 calc(50% - 20px)' }}
+                >
+                  <Column gap="32">
+                    <Row horizontal="space-between" vertical="center">
+                      <Icon name="heart" size="xl" onBackground="brand-strong" />
+                      <Button 
+                        variant="tertiary" 
+                        label="Browse Projects" 
+                        arrowIcon 
+                        size="s"
+                      />
+                    </Row>
+                    <Column gap="12">
+                      <Heading as="h3" variant="display-default-s">
+                        Healthcare
+                      </Heading>
+                      <Text 
+                        variant="body-default-l"
+                        onBackground="neutral-medium"
+                      >
+                        Applications improving access to healthcare services.
+                      </Text>
+                    </Column>
+                  </Column>
+                </Card>
+
+                {/* Sustainability Card */}
+                <Card 
+                  key="sustainability"
+                  padding="48" 
+                  fillWidth 
+                  background="page"
+                  border="neutral-alpha-weak"
+                  radius="l"
+                  style={{ flex: '1 1 calc(50% - 20px)' }}
+                >
+                  <Column gap="32">
+                    <Row horizontal="space-between" vertical="center">
+                      <Icon name="leaf" size="xl" onBackground="brand-strong" />
+                      <Button 
+                        variant="tertiary" 
+                        label="Browse Projects" 
+                        arrowIcon 
+                        size="s"
+                      />
+                    </Row>
+                    <Column gap="12">
+                      <Heading as="h3" variant="display-default-s">
+                        Sustainability
+                      </Heading>
+                      <Text 
+                        variant="body-default-l"
+                        onBackground="neutral-medium"
+                      >
+                        Projects focused on environmental conservation and green living.
+                      </Text>
+                    </Column>
+                  </Column>
+                </Card>
+
+                {/* Community Card */}
+                <Card 
+                  key="community"
+                  padding="48" 
+                  fillWidth 
+                  background="page"
+                  border="neutral-alpha-weak"
+                  radius="l"
+                  style={{ flex: '1 1 calc(50% - 20px)' }}
+                >
+                  <Column gap="32">
+                    <Row horizontal="space-between" vertical="center">
+                      <Icon name="users" size="xl" onBackground="brand-strong" />
+                      <Button 
+                        variant="tertiary" 
+                        label="Browse Projects" 
+                        arrowIcon 
+                        size="s"
+                      />
+                    </Row>
+                    <Column gap="12">
+                      <Heading as="h3" variant="display-default-s">
+                        Community
+                      </Heading>
+                      <Text 
+                        variant="body-default-l"
+                        onBackground="neutral-medium"
+                      >
+                        Solutions addressing local challenges and fostering community engagement.
+                      </Text>
+                    </Column>
+                  </Column>
+                </Card>
+              </Row>
+            </Column>
+
+            {/* Featured Projects Section */}
+            <Column horizontal="center" paddingTop="104" fillWidth gap="48">
+              <Heading as="h2" variant="display-default-m" align="center">
+                Featured Projects
+              </Heading>
+
+              <Row wrap={true} gap="32" fillWidth>
+                <Card padding="32" fillWidth>
+                  <Column gap="16">
+                    <Icon name="code" size="l" />
+                    <Heading as="h3" variant="heading-default-m">
+                      Hackathon Platform
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      A collaborative platform for organizing and participating in coding competitions and hackathons.
+                    </Text>
+                    <Button variant="tertiary" label="Learn More" arrowIcon />
+                  </Column>
+                </Card>
+
+                <Card padding="32" fillWidth>
+                  <Column gap="16">
+                    <Icon name="kanban" size="l" />
+                    <Heading as="h3" variant="heading-default-m">
+                      Project Management
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      Streamlined project tracking and team collaboration tools for developers.
+                    </Text>
+                    <Button variant="tertiary" label="Learn More" arrowIcon />
+                  </Column>
+                </Card>
+
+                <Card padding="32" fillWidth>
+                  <Column gap="16">
+                    <Icon name="users" size="l" />
+                    <Heading as="h3" variant="heading-default-m">
+                      Tech Meetup
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      Connect with local tech communities and organize coding meetups.
+                    </Text>
+                    <Button variant="tertiary" label="Learn More" arrowIcon />
+                  </Column>
+                </Card>
+
+                <Card padding="32" fillWidth>
+                  <Column gap="16">
+                    <Icon name="shield" size="l" />
+                    <Heading as="h3" variant="heading-default-m">
+                      Cybersecurity Hub
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      Learn and practice cybersecurity through hands-on exercises and challenges.
+                    </Text>
+                    <Button variant="tertiary" label="Learn More" arrowIcon />
+                  </Column>
+                </Card>
+              </Row>
+            </Column>
+
+            {/* Testimonials Section */}
+            <Column horizontal="center" paddingTop="104" fillWidth gap="48">
+              <Heading as="h2" variant="display-default-m" align="center">
+                What Our Community Says
+              </Heading>
+
+              <Row wrap={true} gap="32" fillWidth>
+                <Card padding="32" fillWidth>
+                  <Column gap="16">
+                    <Text onBackground="neutral-medium" style={{ fontStyle: 'italic' }}>
+                      "Deta gave me the skills and confidence to build my first app. The community support was incredible!"
+                    </Text>
+                    <Text variant="body-strong-m">Sarah T.</Text>
+                    <Text variant="body-default-s" onBackground="neutral-medium">Student</Text>
+                  </Column>
+                </Card>
+
+                <Card padding="32" fillWidth>
+                  <Column gap="16">
+                    <Text onBackground="neutral-medium" style={{ fontStyle: 'italic' }}>
+                      "I transitioned into a tech career thanks to Deta's resources and mentorship programs."
+                    </Text>
+                    <Text variant="body-strong-m">James L.</Text>
+                    <Text variant="body-default-s" onBackground="neutral-medium">Software Developer</Text>
+                  </Column>
+                </Card>
+              </Row>
+            </Column>
+
+            {/* Newsletter Section */}
+            <Column horizontal="center" paddingTop="104" fillWidth gap="32">
+              <Heading as="h2" variant="display-default-m" align="center">
+                Stay Connected
+              </Heading>
+              
+              <Text align="center" onBackground="neutral-medium" marginBottom="32">
+                Get the latest updates, resources, and event invites delivered to your inbox.
+              </Text>
+
+              <Row gap="32" fillWidth wrap={true} style={{ maxWidth: '32rem' }}>
+                <Input
+                  id="newsletter"
+                  label="Email"
+                  placeholder="Enter your email"
+                  type="email"
+                />
+                <Button label="Subscribe" />
+              </Row>
+
+              <Row gap="16" marginTop="32">
+                <IconButton
+                  href="https://twitter.com"
+                  icon="twitter"
+                  variant="tertiary"
+                  tooltip="Twitter"
+                />
+                <IconButton
+                  href="https://linkedin.com"
+                  icon="linkedin"
+                  variant="tertiary"
+                  tooltip="LinkedIn"
+                />
+                <IconButton
+                  href="https://github.com"
+                  icon="github"
+                  variant="tertiary"
+                  tooltip="GitHub"
+                />
+              </Row>
+            </Column>
           </Column>
         </Column>
-
-        {/* PAYMENT */}
-        <Row
-          paddingX="32"
-          fillWidth
-          paddingY="160"
-          gap="64"
-          position="relative"
-          mobileDirection="column"
-          vertical="center"
-        >
-          <Background
-            style={{ left: "-1px" }}
-            borderTop="neutral-alpha-medium"
-            mask={{
-              x: 0,
-              y: 50,
-              radius: 100,
-            }}
-            position="absolute"
-            grid={{
-              display: true,
-              opacity: 100,
-              width: "10%",
-              color: "neutral-alpha-medium",
-              height: "1.25%",
-            }}
-          />
-          <Row
-            position="relative"
-            shadow="xl"
-            fillWidth
-            border="neutral-alpha-medium"
-            borderStyle="dashed"
-            background="page"
-            radius="xl"
-          >
-            <TiltFx
-              aspectRatio="16 / 9"
-              fillWidth
-              radius="xl"
-              border="accent-alpha-weak"
-              overflow="hidden"
-            >
-              <HoloFx fill>
-                <Background
-                  fill
-                  position="absolute"
-                  gradient={{
-                    display: true,
-                    tilt: -45,
-                    height: 150,
-                    width: 100,
-                    x: 75,
-                    y: -50,
-                    colorStart: "brand-solid-strong",
-                    colorEnd: "accent-solid-weak",
-                  }}
-                >
-                  <Column
-                    fill
-                    position="absolute"
-                    padding="24"
-                    vertical="end"
-                    gap="12"
-                    onSolid="neutral-strong"
-                  >
-                    <Text variant="body-default-xl">Lorant One</Text>
-                    <Row
-                      fillWidth
-                      horizontal="space-between"
-                      vertical="end"
-                      paddingRight="16"
-                    >
-                      <Column gap="4">
-                        <Text variant="body-default-m">08 / 27</Text>
-                        <Text variant="body-default-m">1234 5678 1234 5678</Text>
-                      </Column>
-                      <Icon name="visa" size="xl" />
-                    </Row>
-                  </Column>
-                </Background>
-              </HoloFx>
-            </TiltFx>
-          </Row>
-          <Column position="relative" fillWidth gap="-1">
-            <Row fillWidth vertical="center" horizontal="space-between" marginBottom="32">
-              <Heading as="h3" variant="display-default-xs">
-                Fill in your card details
-              </Heading>
-              <IconButton
-                data-border="rounded"
-                variant="tertiary"
-                icon="chevronRight"
-                tooltip="Next"
-                tooltipPosition="left"
-              />
-            </Row>
-            <Input
-              id="cardnumber"
-              label="Card number"
-              labelAsPlaceholder
-              radius="top"
-              defaultValue="1234 5678 1234 5678"
-            />
-            <Row fillWidth gap="-1">
-              <Input
-                id="expiry"
-                label="Expiry date"
-                labelAsPlaceholder
-                radius="bottom-left"
-                defaultValue="08 / 27"
-              />
-              <Input
-                id="cvv"
-                label="CVV"
-                labelAsPlaceholder
-                radius="bottom-right"
-                defaultValue="123"
-              />
-            </Row>
-          </Column>
-        </Row>
-
-        {/* BOOKING */}
-        <Row
-          padding="32"
-          fillWidth
-          gap="64"
-          position="relative"
-          mobileDirection="column"
-          vertical="center"
-        >
-          <Background
-            fill
-            position="absolute"
-            gradient={{
-              display: true,
-              opacity: 60,
-              tilt: 0,
-              height: 100,
-              width: 100,
-              x: 50,
-              y: 0,
-              colorStart: "brand-solid-strong",
-              colorEnd: "static-transparent",
-            }}
-          />
-          <Column
-            fillWidth
-            background="surface"
-            radius="xl"
-            border="neutral-medium"
-            overflow="hidden"
-            padding="32"
-            gap="40"
-            position="relative"
-          >
-            <Row fillWidth horizontal="center" gap="-1">
-              <Column
-                maxWidth={12}
-                gap="4"
-                leftRadius="l"
-                paddingX="16"
-                paddingY="12"
-                background="surface"
-                border="neutral-medium"
-              >
-                <Text variant="label-default-s" onBackground="neutral-weak">
-                  Check in
-                </Text>
-                {selectedRange?.startDate ? (
-                  <>
-                    {selectedRange?.startDate.toLocaleDateString("default", {
-                      day: "numeric",
-                      month: "long",
-                    })}
-                  </>
-                ) : (
-                  "Add dates"
-                )}
-              </Column>
-              <Column
-                maxWidth={12}
-                gap="4"
-                rightRadius="l"
-                paddingX="16"
-                paddingY="12"
-                background="surface"
-                border="neutral-medium"
-              >
-                <Text variant="label-default-s" onBackground="neutral-weak">
-                  Check out
-                </Text>
-                {selectedRange?.endDate ? (
-                  <>
-                    {selectedRange?.endDate?.toLocaleDateString("default", {
-                      day: "numeric",
-                      month: "long",
-                    })}
-                  </>
-                ) : (
-                  "Add dates"
-                )}
-              </Column>
-            </Row>
-            <Row fillWidth horizontal="center">
-              <DateRangePicker
-                data-scaling="110"
-                size="l"
-                fitWidth
-                gap="40"
-                mobileDirection="column"
-                onChange={(range) => setSelectedRange(range)}
-                value={selectedRange}
-              />
-            </Row>
-          </Column>
-        </Row>
-
-        {/* PROFILE */}
-        <Row
-          horizontal="center"
-          paddingX="32"
-          paddingY="64"
-          fillWidth
-          gap="32"
-          position="relative"
-        >
-          <Background
-            mask={{
-              cursor: true,
-            }}
-            dots={{
-              display: true,
-              opacity: 50,
-              color: "neutral-solid-strong",
-              size: "48",
-            }}
-            fill
-            position="absolute"
-            gradient={{
-              display: true,
-              opacity: 100,
-              tilt: 0,
-              height: 100,
-              width: 200,
-              x: 50,
-              y: 0,
-              colorStart: "neutral-background-medium",
-              colorEnd: "static-transparent",
-            }}
-          />
-          <Column maxWidth={32} gap="-1">
-            <Feedback icon variant="success" radius={undefined} topRadius="l" zIndex={1}>
-              Your profile is public.
-            </Feedback>
-            <Column
-              background="page"
-              radius={undefined}
-              bottomRadius="l"
-              overflow="hidden"
-              position="relative"
-              fillWidth
-              horizontal="center"
-              border="neutral-medium"
-            >
-              <MediaUpload
-                border={undefined}
-                emptyState={<Row paddingBottom="80">Drag and drop or click to browse</Row>}
-                position="absolute"
-                aspectRatio="16 / 9"
-                sizes="560px"
-                radius={undefined}
-                initialPreviewImage="/images/profile.jpg"
-              />
-              <Column
-                paddingTop="160"
-                paddingX="32"
-                paddingBottom="32"
-                fillWidth
-                position="relative"
-                horizontal="center"
-                gap="8"
-              >
-                <Avatar
-                  zIndex={1}
-                  style={{
-                    border: "8px solid var(--page-background)",
-                  }}
-                  size="xl"
-                  src="/images/l.jpg"
-                />
-                <Heading marginTop="24" as="h3" variant="display-default-m">
-                  Lorant One
-                </Heading>
-                <Text align="center" onBackground="neutral-weak" marginBottom="24">
-                  165 connections
-                </Text>
-                <SegmentedControl
-                  onToggle={(value) => console.log("SegmentedControl changed", value)}
-                  buttons={[
-                    {
-                      size: "l",
-                      value: "profile",
-                      label: "Profile",
-                    },
-                    {
-                      size: "l",
-                      value: "settings",
-                      label: "Settings",
-                    },
-                    {
-                      size: "l",
-                      value: "notifications",
-                      label: (
-                        <Row gap="8">
-                          Notifications
-                          <StatusIndicator size="s" color="cyan" />
-                        </Row>
-                      ),
-                    },
-                    {
-                      size: "l",
-                      value: "integrations",
-                      label: "Integrations",
-                    },
-                    {
-                      size: "l",
-                      value: "inbox",
-                      label: "Inbox",
-                    },
-                    {
-                      size: "l",
-                      value: "requests",
-                      label: "Requests",
-                    },
-                  ]}
-                />
-                <Column paddingY="32" fillWidth gap="-1">
-                  <Input
-                    radius="top"
-                    label="Name"
-                    labelAsPlaceholder
-                    defaultValue="Lorant One"
-                    id="name"
-                  />
-                  <Input
-                    radius="bottom"
-                    label="Email"
-                    labelAsPlaceholder
-                    defaultValue="lorant@once-ui.com"
-                    id="profileEmail"
-                  />
-                </Column>
-                <Textarea
-                  id="intro"
-                  label="Intro"
-                  lines="auto"
-                  value={intro}
-                  onChange={(e) => setIntro(e.target.value)}
-                  validate={validateIntro}
-                />
-                <TagInput
-                  id="interests"
-                  value={tags}
-                  onChange={(newTags: string[]) => {
-                    setTags(newTags);
-                  }}
-                  label="Interests"
-                />
-                <Select
-                  searchable
-                  labelAsPlaceholder
-                  id="select"
-                  label="Country"
-                  value={selectedValue}
-                  options={[
-                    {
-                      value: "Austria",
-                      label: "Austria",
-                      onClick: (value) => console.log("Visiblity set: ", value),
-                    },
-                    {
-                      value: "Finland",
-                      label: "Finland",
-                      onClick: (value) => console.log("Visiblity set: ", value),
-                    },
-                    {
-                      value: "New Zeland",
-                      label: "New Zeland",
-                      onClick: (value) => console.log("Visiblity set: ", value),
-                    },
-                    {
-                      value: "Norway",
-                      label: "Norway",
-                      onClick: (value) => console.log("Visiblity set: ", value),
-                    },
-                    {
-                      value: "United Kingdom",
-                      label: "United Kingdom",
-                      onClick: (value) => console.log("Visiblity set: ", value),
-                    },
-                    {
-                      value: "United States",
-                      label: "United States",
-                      onClick: (value) => console.log("Visiblity set: ", value),
-                    },
-                  ]}
-                  onSelect={handleSelect}
-                />
-                <Button
-                  className="mt-32"
-                  prefixIcon="security"
-                  variant="secondary"
-                  onClick={() => setIsFirstDialogOpen(true)}
-                >
-                  Password and security
-                </Button>
-              </Column>
-            </Column>
-          </Column>
-        </Row>
-
-        {/* CODE PREVIEW */}
-        <TiltFx fillWidth paddingX="32" paddingTop="64">
-          <Column
-            border="neutral-alpha-weak"
-            paddingX="32"
-            radius="xl"
-            overflow="hidden"
-            paddingY="160"
-            fillWidth
-            position="relative"
-          >
-            <Background
-              mask={{
-                x: 100,
-                y: 0,
-              }}
-              position="absolute"
-              grid={{
-                display: true,
-                color: "neutral-alpha-medium",
-                width: "2rem",
-                height: "2rem",
-              }}
-            />
-            <Background
-              mask={{
-                x: 0,
-                y: 100,
-                radius: 100,
-              }}
-              position="absolute"
-              grid={{
-                display: true,
-                color: "brand-alpha-strong",
-                width: "12",
-                height: "12",
-              }}
-              gradient={{
-                display: true,
-                opacity: 100,
-                height: 100,
-                width: 100,
-                tilt: 0,
-                x: 0,
-                y: 100,
-                colorStart: "brand-solid-strong",
-                colorEnd: "brand-background-medium",
-              }}
-            />
-            <Column horizontal="center" gap="48" fillWidth position="relative">
-              <Heading align="center" as="h2" variant="display-default-l">
-                Quick start
-              </Heading>
-              <CodeBlock
-                compact
-                maxWidth={40}
-                codeInstances={[
-                  {
-                    code: `git clone https://github.com/once-ui-system/nextjs-starter.git`,
-                    language: "tsx",
-                    label: "tsx",
-                  },
-                ]}
-              />
-            </Column>
-          </Column>
-        </TiltFx>
-
-        <Row
-          position="relative"
-          fillWidth
-          paddingX="32"
-          paddingTop="160"
-          minHeight={28}
-          paddingBottom="80"
-          horizontal="center"
-          vertical="end"
-        >
-          <Background
-            mask={{
-              x: 50,
-              y: 100,
-            }}
-            position="absolute"
-            grid={{
-              display: true,
-              width: "0.25rem",
-              color: "brand-alpha-strong",
-              height: "0.25rem",
-            }}
-          />
-          <Row position="relative" textVariant="display-default-m" align="center">
-            Learn more
-          </Row>
-        </Row>
-        <Row fillWidth overflow="hidden">
-          <Row maxWidth="32" borderTop="neutral-alpha-weak" borderBottom="neutral-medium"></Row>
-          <Row fillWidth border="neutral-alpha-weak" mobileDirection="column">
-            {links.map((link, index) => (
-              <SmartLink unstyled fillWidth target="_blank" key={link.href} href={link.href}>
-                <Card
-                  fillWidth
-                  padding="40"
-                  gap="8"
-                  direction="column"
-                  background={undefined}
-                  borderRight={index < links.length - 1 ? "neutral-alpha-weak" : undefined}
-                  border={undefined}
-                  radius={undefined}
-                >
-                  <Row fillWidth center gap="12">
-                    <Text variant="body-strong-m" onBackground="neutral-strong">
-                      {link.title}
-                    </Text>
-                    <Icon size="s" name="arrowUpRight" />
-                  </Row>
-                  <Text align="center" variant="body-default-s" onBackground="neutral-weak">
-                    {link.description}
-                  </Text>
-                </Card>
-              </SmartLink>
-            ))}
-          </Row>
-          <Row maxWidth="32" borderTop="neutral-alpha-weak" borderBottom="neutral-medium"></Row>
-        </Row>
-        <Row
-          position="relative"
-          as="footer"
-          fillWidth
-          paddingX="l"
-          paddingTop="128"
-          paddingBottom="80"
-        >
-          <Background
-            borderTop="brand-alpha-strong"
-            mask={{
-              x: 50,
-              y: 0,
-            }}
-            position="absolute"
-            grid={{
-              display: true,
-              width: "0.25rem",
-              color: "brand-alpha-strong",
-              height: "0.25rem",
-            }}
-          />
-          <Column
-            position="relative"
-            textVariant="body-default-xs"
-            onBackground="neutral-medium"
-            horizontal="center"
-            align="center"
-            fillWidth
-            gap="16"
-          >
-            <Logo wordmark={false} size="s" />
-            <Text size="m">
-              <Text onBackground="neutral-weak">2024 /</Text> Once UI
-            </Text>
-            <SmartLink href="https://github.com/once-ui-system/nextjs-starter?tab=MIT-1-ov-file">
-              MIT License
-            </SmartLink>
-          </Column>
-        </Row>
       </Column>
 
       <Dialog
@@ -998,13 +729,13 @@ export default function Home() {
         title="Account details"
         description="Manage your security settings and password."
         base={isSecondDialogOpen}
-        onHeightChange={(height) => setFirstDialogHeight(height)}
+        onHeightChange={(height: number) => setFirstDialogHeight(height)}
         footer={
-          <>
+          <Fragment>
             <Button variant="secondary" onClick={() => setIsFirstDialogOpen(false)}>
               Close
             </Button>
-          </>
+          </Fragment>
         }
       >
         <Column paddingTop="24" fillWidth gap="24">
@@ -1026,12 +757,15 @@ export default function Home() {
         description="Choose a new password for your account."
         minHeight={firstDialogHeight}
         footer={
-          <>
+          <React.Fragment>
             <Button variant="secondary" onClick={() => setIsSecondDialogOpen(false)}>
               Close
             </Button>
-            <Button onClick={() => setIsSecondDialogOpen(false)}>Save</Button>
-          </>
+            <Button 
+              label="Save"
+              onClick={() => setIsSecondDialogOpen(false)} 
+            />
+          </React.Fragment>
         }
       >
         <PasswordInput id="resetPassword" label="New password" />
