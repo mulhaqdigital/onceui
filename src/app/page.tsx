@@ -96,6 +96,10 @@ export default function Home() {
     return null;
   };
 
+  const handleHeightChange = (height: number): void => {
+    setFirstDialogHeight(height);
+  };
+
   return (
     <Column fillWidth paddingY="80" paddingX="s" horizontal="center" flex={1}>
       <Fade
@@ -322,87 +326,222 @@ export default function Home() {
               horizontal="center" 
               paddingTop="104" 
               fillWidth 
-              gap="48"
+              gap="64"
               background="surface"
-              padding="64"
+              padding="80"
               border="neutral-alpha-weak"
               radius="xl"
+              position="relative"
             >
-              <Heading as="h2" variant="display-default-m" align="center">
-                Our Impact
-              </Heading>
-              
-              <Text 
-                align="center" 
-                variant="body-default-l" 
-                onBackground="neutral-medium"
-                marginBottom="32"
-              >
-                Since our inception, Deta has:
-              </Text>
+              <Background
+                mask={{
+                  x: 0,
+                  y: 0,
+                  radius: 100,
+                }}
+                position="absolute"
+                gradient={{
+                  display: true,
+                  tilt: -35,
+                  height: 50,
+                  width: 75,
+                  x: 80,
+                  y: 20,
+                  colorStart: "brand-solid-medium",
+                  colorEnd: "static-transparent",
+                  opacity: 20
+                }}
+              />
 
-              <Row wrap={true} gap="32" fillWidth>
-                <Card padding="32" fillWidth background="page">
-                  <Column gap="8" horizontal="center">
-                    <Heading 
-                      as="h3"
-                      variant="display-default-xl" 
-                      align="center"
+              <Column gap="24" horizontal="center">
+                <InlineCode radius="xl" shadow="m" fit paddingX="16" paddingY="8">
+                  Our Growth
+                  <Text onBackground="brand-medium" marginLeft="8">
+                    2023 Impact Report
+                  </Text>
+                </InlineCode>
+                
+                <Heading as="h2" variant="display-default-l" align="center">
+                  Making a Real Difference
+                </Heading>
+                
+                <Text 
+                  align="center" 
+                  variant="body-default-l" 
+                  onBackground="neutral-medium"
+                  style={{ maxWidth: '36rem' }}
+                  marginBottom="32"
+                >
+                  Through collaboration and dedication, we're building a more inclusive tech community.
+                </Text>
+              </Column>
+
+              <Row wrap={true} gap="32" fillWidth horizontal="center" maxWidth="xl">
+                <Card 
+                  padding="48" 
+                  background="surface"
+                  style={{ 
+                    flex: '1 1 calc(25% - 24px)', 
+                    minWidth: '240px',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column gap="24" horizontal="center">
+                    <Icon 
+                      name="users" 
+                      size="xl" 
                       onBackground="brand-strong"
-                    >
-                      10,000+
-                    </Heading>
-                    <Text align="center" onBackground="neutral-medium">
-                      Learners taught worldwide
-                    </Text>
+                    />
+                    <Column gap="8" horizontal="center">
+                      <Heading 
+                        as="h3"
+                        variant="display-default-xl" 
+                        align="center"
+                        onBackground="brand-strong"
+                      >
+                        10,000+
+                      </Heading>
+                      <Text 
+                        align="center" 
+                        variant="body-strong-m"
+                      >
+                        Active Learners
+                      </Text>
+                      <Text 
+                        align="center" 
+                        variant="body-default-s" 
+                        onBackground="neutral-medium"
+                      >
+                        From 50+ countries worldwide
+                      </Text>
+                    </Column>
                   </Column>
                 </Card>
 
-                <Card padding="32" fillWidth background="page">
-                  <Column gap="8" horizontal="center">
-                    <Heading 
-                      as="h3" 
-                      variant="display-default-xl" 
-                      align="center"
+                <Card 
+                  padding="48" 
+                  background="surface"
+                  style={{ 
+                    flex: '1 1 calc(25% - 24px)', 
+                    minWidth: '240px',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column gap="24" horizontal="center">
+                    <Icon 
+                      name="code" 
+                      size="xl" 
                       onBackground="brand-strong"
-                    >
-                      500+
-                    </Heading>
-                    <Text align="center" onBackground="neutral-medium">
-                      Real-world projects developed
-                    </Text>
+                    />
+                    <Column gap="8" horizontal="center">
+                      <Heading 
+                        as="h3" 
+                        variant="display-default-xl" 
+                        align="center"
+                        onBackground="brand-strong"
+                      >
+                        500+
+                      </Heading>
+                      <Text 
+                        align="center" 
+                        variant="body-strong-m"
+                      >
+                        Projects Launched
+                      </Text>
+                      <Text 
+                        align="center" 
+                        variant="body-default-s" 
+                        onBackground="neutral-medium"
+                      >
+                        Making real-world impact
+                      </Text>
+                    </Column>
                   </Column>
                 </Card>
 
-                <Card padding="32" fillWidth background="page">
-                  <Column gap="8" horizontal="center">
-                    <Heading 
-                      as="h3" 
-                      variant="display-default-xl" 
-                      align="center"
+                <Card 
+                  padding="48" 
+                  background="surface"
+                  style={{ 
+                    flex: '1 1 calc(25% - 24px)', 
+                    minWidth: '240px',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column gap="24" horizontal="center">
+                    <Icon 
+                      name="target" 
+                      size="xl" 
                       onBackground="brand-strong"
-                    >
-                      25
-                    </Heading>
-                    <Text align="center" onBackground="neutral-medium">
-                      Hackathons and community events
-                    </Text>
+                    />
+                    <Column gap="8" horizontal="center">
+                      <Heading 
+                        as="h3" 
+                        variant="display-default-xl" 
+                        align="center"
+                        onBackground="brand-strong"
+                      >
+                        25
+                      </Heading>
+                      <Text 
+                        align="center" 
+                        variant="body-strong-m"
+                      >
+                        Community Events
+                      </Text>
+                      <Text 
+                        align="center" 
+                        variant="body-default-s" 
+                        onBackground="neutral-medium"
+                      >
+                        Hackathons & workshops
+                      </Text>
+                    </Column>
                   </Column>
                 </Card>
 
-                <Card padding="32" fillWidth background="page">
-                  <Column gap="8" horizontal="center">
-                    <Heading 
-                      as="h3" 
-                      variant="display-default-xl" 
-                      align="center"
+                <Card 
+                  padding="48" 
+                  background="surface"
+                  style={{ 
+                    flex: '1 1 calc(25% - 24px)', 
+                    minWidth: '240px',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column gap="24" horizontal="center">
+                    <Icon 
+                      name="handshake" 
+                      size="xl" 
                       onBackground="brand-strong"
-                    >
-                      15
-                    </Heading>
-                    <Text align="center" onBackground="neutral-medium">
-                      Partner organizations
-                    </Text>
+                    />
+                    <Column gap="8" horizontal="center">
+                      <Heading 
+                        as="h3" 
+                        variant="display-default-xl" 
+                        align="center"
+                        onBackground="brand-strong"
+                      >
+                        15
+                      </Heading>
+                      <Text 
+                        align="center" 
+                        variant="body-strong-m"
+                      >
+                        Partners
+                      </Text>
+                      <Text 
+                        align="center" 
+                        variant="body-default-s" 
+                        onBackground="neutral-medium"
+                      >
+                        Industry collaborations
+                      </Text>
+                    </Column>
                   </Column>
                 </Card>
               </Row>
@@ -455,10 +594,14 @@ export default function Home() {
                   key="education"
                   padding="48" 
                   fillWidth 
-                  background="page"
+                  background="surface"
                   border="neutral-alpha-weak"
                   radius="l"
-                  style={{ flex: '1 1 calc(50% - 20px)' }}
+                  style={{ 
+                    flex: '1 1 calc(50% - 20px)',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
                 >
                   <Column gap="32">
                     <Row horizontal="space-between" vertical="center">
@@ -489,10 +632,14 @@ export default function Home() {
                   key="healthcare"
                   padding="48" 
                   fillWidth 
-                  background="page"
+                  background="surface"
                   border="neutral-alpha-weak"
                   radius="l"
-                  style={{ flex: '1 1 calc(50% - 20px)' }}
+                  style={{ 
+                    flex: '1 1 calc(50% - 20px)',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
                 >
                   <Column gap="32">
                     <Row horizontal="space-between" vertical="center">
@@ -523,10 +670,14 @@ export default function Home() {
                   key="sustainability"
                   padding="48" 
                   fillWidth 
-                  background="page"
+                  background="surface"
                   border="neutral-alpha-weak"
                   radius="l"
-                  style={{ flex: '1 1 calc(50% - 20px)' }}
+                  style={{ 
+                    flex: '1 1 calc(50% - 20px)',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
                 >
                   <Column gap="32">
                     <Row horizontal="space-between" vertical="center">
@@ -557,10 +708,14 @@ export default function Home() {
                   key="community"
                   padding="48" 
                   fillWidth 
-                  background="page"
+                  background="surface"
                   border="neutral-alpha-weak"
                   radius="l"
-                  style={{ flex: '1 1 calc(50% - 20px)' }}
+                  style={{ 
+                    flex: '1 1 calc(50% - 20px)',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
                 >
                   <Column gap="32">
                     <Row horizontal="space-between" vertical="center">
@@ -590,60 +745,313 @@ export default function Home() {
 
             {/* Featured Projects Section */}
             <Column horizontal="center" paddingTop="104" fillWidth gap="48">
-              <Heading as="h2" variant="display-default-m" align="center">
-                Featured Projects
-              </Heading>
+              <Column gap="24" horizontal="center">
+                <Heading as="h2" variant="display-default-l" align="center">
+                  Featured Projects
+                </Heading>
+                <Text 
+                  align="center" 
+                  variant="body-default-l" 
+                  onBackground="neutral-medium"
+                  style={{ maxWidth: '36rem' }}
+                >
+                  Explore some of our community's most impactful projects
+                </Text>
+              </Column>
 
-              <Row wrap={true} gap="32" fillWidth>
-                <Card padding="32" fillWidth>
-                  <Column gap="16">
-                    <Icon name="code" size="l" />
-                    <Heading as="h3" variant="heading-default-m">
-                      Hackathon Platform
-                    </Heading>
-                    <Text onBackground="neutral-medium">
-                      A collaborative platform for organizing and participating in coding competitions and hackathons.
-                    </Text>
-                    <Button variant="tertiary" label="Learn More" arrowIcon />
+              <Row wrap={true} gap="32" fillWidth maxWidth="xl">
+                <Card 
+                  padding="0" 
+                  background="surface"
+                  style={{ 
+                    flex: '1 1 calc(50% - 16px)', 
+                    minWidth: '320px',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column>
+                    <SmartImage
+                      src="/images/hackathon-platform.jpg"
+                      alt="Hackathon Platform Interface"
+                      width={600}
+                      height={300}
+                      isLoading={false}
+                      style={{ borderRadius: '12px 12px 0 0' }}
+                    />
+                    <Column padding="32" gap="16">
+                      <Row 
+                        gap="8" 
+                        vertical="center" 
+                        background="success-weak"
+                        padding="8"
+                        radius="full"
+                      >
+                        <Icon name="checkCircle" size="s" color="success" />
+                        <Text variant="body-strong-s">Active Project</Text>
+                      </Row>
+                      <Heading as="h3" variant="heading-default-m">
+                        Hackathon Platform
+                      </Heading>
+                      <Text onBackground="neutral-medium">
+                        An open-source platform for organizing and participating in coding competitions. 
+                        Features include team formation, project submission, and real-time collaboration.
+                      </Text>
+                      <Row gap="16" wrap={true}>
+                        <InlineCode>React</InlineCode>
+                        <InlineCode>Node.js</InlineCode>
+                        <InlineCode>MongoDB</InlineCode>
+                      </Row>
+                      <Row horizontal="space-between" vertical="center" marginTop="16">
+                        <AvatarGroup 
+                          size="s" 
+                          limit={3}
+                          avatars={[
+                            {
+                              title: "Sarah Chen",
+                              src: "/avatars/sarah.jpg"
+                            },
+                            {
+                              title: "Mike Ross",
+                              src: "/avatars/mike.jpg"
+                            },
+                            {
+                              title: "Alex Kim",
+                              src: "/avatars/alex.jpg"
+                            },
+                            {
+                              title: "Lisa Park",
+                              src: "/avatars/lisa.jpg"
+                            }
+                          ]}
+                        />
+                        <Button 
+                          variant="tertiary" 
+                          label="View Project"
+                          aria-label="View project details"
+                          arrowIcon 
+                          size="s"
+                        />
+                      </Row>
+                    </Column>
                   </Column>
                 </Card>
 
-                <Card padding="32" fillWidth>
-                  <Column gap="16">
-                    <Icon name="kanban" size="l" />
-                    <Heading as="h3" variant="heading-default-m">
-                      Project Management
-                    </Heading>
-                    <Text onBackground="neutral-medium">
-                      Streamlined project tracking and team collaboration tools for developers.
-                    </Text>
-                    <Button variant="tertiary" label="Learn More" arrowIcon />
+                <Card 
+                  padding="0" 
+                  background="surface"
+                  style={{ 
+                    flex: '1 1 calc(50% - 16px)', 
+                    minWidth: '320px',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column>
+                    <SmartImage
+                      src="/images/project-management.jpg"
+                      alt="Project Management Dashboard"
+                      width={600}
+                      height={300}
+                      isLoading={false}
+                      style={{ borderRadius: '12px 12px 0 0' }}
+                    />
+                    <Column padding="32" gap="16">
+                      <Row 
+                        gap="8" 
+                        vertical="center"
+                        background="warning-weak"
+                        padding="8"
+                        radius="full"
+                      >
+                        <Icon name="alertTriangle" size="s" color="warning" />
+                        <Text variant="body-strong-s">In Development</Text>
+                      </Row>
+                      <Heading as="h3" variant="heading-default-m">
+                        Project Management Tool
+                      </Heading>
+                      <Text onBackground="neutral-medium">
+                        A streamlined project tracking system designed for developer workflows. 
+                        Includes Kanban boards, time tracking, and GitHub integration.
+                      </Text>
+                      <Row gap="16" wrap={true}>
+                        <InlineCode>Vue.js</InlineCode>
+                        <InlineCode>Firebase</InlineCode>
+                        <InlineCode>GitHub API</InlineCode>
+                      </Row>
+                      <Row horizontal="space-between" vertical="center" marginTop="16">
+                        <AvatarGroup 
+                          size="s" 
+                          limit={3}
+                          avatars={[
+                            {
+                              title: "James Lee",
+                              src: "/avatars/james.jpg"
+                            },
+                            {
+                              title: "Emma Wilson",
+                              src: "/avatars/emma.jpg"
+                            },
+                            {
+                              title: "David Park",
+                              src: "/avatars/david.jpg"
+                            }
+                          ]}
+                        />
+                        <Button 
+                          variant="tertiary" 
+                          label="View Project"
+                          aria-label="View project details"
+                          arrowIcon 
+                          size="s"
+                        />
+                      </Row>
+                    </Column>
                   </Column>
                 </Card>
 
-                <Card padding="32" fillWidth>
-                  <Column gap="16">
-                    <Icon name="users" size="l" />
-                    <Heading as="h3" variant="heading-default-m">
-                      Tech Meetup
-                    </Heading>
-                    <Text onBackground="neutral-medium">
-                      Connect with local tech communities and organize coding meetups.
-                    </Text>
-                    <Button variant="tertiary" label="Learn More" arrowIcon />
+                <Card 
+                  padding="0" 
+                  background="surface"
+                  style={{ 
+                    flex: '1 1 calc(50% - 16px)', 
+                    minWidth: '320px',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column>
+                    <SmartImage
+                      src="/images/tech-meetup.jpg"
+                      alt="Tech Meetup Application"
+                      width={600}
+                      height={300}
+                      isLoading={false}
+                      style={{ borderRadius: '12px 12px 0 0' }}
+                    />
+                    <Column padding="32" gap="16">
+                      <Row 
+                        gap="8" 
+                        vertical="center" 
+                        background="success-weak"
+                        padding="8"
+                        radius="full"
+                      >
+                        <Icon name="checkCircle" size="s" color="success" />
+                        <Text variant="body-strong-s">Active Project</Text>
+                      </Row>
+                      <Heading as="h3" variant="heading-default-m">
+                        Tech Meetup App
+                      </Heading>
+                      <Text onBackground="neutral-medium">
+                        A community platform for organizing and discovering local tech events. 
+                        Features event creation, RSVP management, and location-based search.
+                      </Text>
+                      <Row gap="16" wrap={true}>
+                        <InlineCode>Next.js</InlineCode>
+                        <InlineCode>Prisma</InlineCode>
+                        <InlineCode>PostgreSQL</InlineCode>
+                      </Row>
+                      <Row horizontal="space-between" vertical="center" marginTop="16">
+                        <AvatarGroup 
+                          size="s" 
+                          limit={3}
+                          avatars={[
+                            {
+                              title: "Nina Rodriguez",
+                              src: "/avatars/nina.jpg"
+                            },
+                            {
+                              title: "Tom Chen",
+                              src: "/avatars/tom.jpg"
+                            },
+                            {
+                              title: "Sarah Kim",
+                              src: "/avatars/sarahk.jpg"
+                            }
+                          ]}
+                        />
+                        <Button 
+                          variant="tertiary" 
+                          label="View Project"
+                          aria-label="View project details"
+                          arrowIcon 
+                          size="s"
+                        />
+                      </Row>
+                    </Column>
                   </Column>
                 </Card>
 
-                <Card padding="32" fillWidth>
-                  <Column gap="16">
-                    <Icon name="shield" size="l" />
-                    <Heading as="h3" variant="heading-default-m">
-                      Cybersecurity Hub
-                    </Heading>
-                    <Text onBackground="neutral-medium">
-                      Learn and practice cybersecurity through hands-on exercises and challenges.
-                    </Text>
-                    <Button variant="tertiary" label="Learn More" arrowIcon />
+                <Card 
+                  padding="0" 
+                  background="surface"
+                  style={{ 
+                    flex: '1 1 calc(50% - 16px)', 
+                    minWidth: '320px',
+                    transition: 'box-shadow 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column>
+                    <SmartImage
+                      src="/images/cybersecurity.jpg"
+                      alt="Cybersecurity Training Platform"
+                      width={600}
+                      height={300}
+                      isLoading={false}
+                      style={{ borderRadius: '12px 12px 0 0' }}
+                    />
+                    <Column padding="32" gap="16">
+                      <Row 
+                        gap="8" 
+                        vertical="center"
+                        background="neutral-weak"
+                        padding="8"
+                        radius="full"
+                      >
+                        <Icon name="clock" size="s" color="neutral" />
+                        <Text variant="body-strong-s">Coming Soon</Text>
+                      </Row>
+                      <Heading as="h3" variant="heading-default-m">
+                        Cybersecurity Hub
+                      </Heading>
+                      <Text onBackground="neutral-medium">
+                        An interactive learning platform for cybersecurity education. 
+                        Includes CTF challenges, security labs, and certification prep.
+                      </Text>
+                      <Row gap="16" wrap={true}>
+                        <InlineCode>Python</InlineCode>
+                        <InlineCode>Docker</InlineCode>
+                        <InlineCode>AWS</InlineCode>
+                      </Row>
+                      <Row horizontal="space-between" vertical="center" marginTop="16">
+                        <AvatarGroup 
+                          size="s" 
+                          limit={3}
+                          avatars={[
+                            {
+                              title: "Marcus Johnson",
+                              src: "/avatars/marcus.jpg"
+                            },
+                            {
+                              title: "Priya Patel",
+                              src: "/avatars/priya.jpg"
+                            },
+                            {
+                              title: "Chris Wong",
+                              src: "/avatars/chris.jpg"
+                            }
+                          ]}
+                        />
+                        <Button 
+                          variant="tertiary" 
+                          label="Join Waitlist"
+                          arrowIcon 
+                          size="s"
+                        />
+                      </Row>
+                    </Column>
                   </Column>
                 </Card>
               </Row>
@@ -692,10 +1100,16 @@ export default function Home() {
                 <Input
                   id="newsletter"
                   label="Email"
-                  placeholder="Enter your email"
+                  placeholder=""
                   type="email"
+                  size={1}
+                  width="full"
+                  aria-label="Email newsletter signup"
                 />
-                <Button label="Subscribe" />
+                <Button 
+                  label="Subscribe" 
+                  size="l"
+                />
               </Row>
 
               <Row gap="16" marginTop="32">
@@ -729,7 +1143,7 @@ export default function Home() {
         title="Account details"
         description="Manage your security settings and password."
         base={isSecondDialogOpen}
-        onHeightChange={(height: number) => setFirstDialogHeight(height)}
+        onHeightChange={handleHeightChange}
         footer={
           <Fragment>
             <Button variant="secondary" onClick={() => setIsFirstDialogOpen(false)}>
