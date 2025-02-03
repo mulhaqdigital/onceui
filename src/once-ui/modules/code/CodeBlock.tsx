@@ -173,7 +173,24 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
           fillWidth
           position="relative"
         >
-          <Flex overflowX="auto" fillWidth>
+          {compact && copyButton && (
+            <Flex
+              className={styles.compactCopy}
+              overflow="hidden"
+              zIndex={1}
+              right="8"
+              position="absolute"
+            >
+              <IconButton
+                aria-label="Copy code"
+                onClick={handleCopy}
+                icon={copyIcon}
+                size="m"
+                variant="secondary"
+              />
+            </Flex>
+          )}
+          <Flex overflowX="auto">
             <pre
               style={{ maxHeight: `${codeHeight}rem` }}
               data-line={highlight}
@@ -186,24 +203,6 @@ const CodeBlock: React.FC<CodeBlockProps> = ({
               </code>
             </pre>
           </Flex>
-          {compact && copyButton && (
-            <Flex
-              paddingX="8"
-              paddingY="4"
-              className={styles.compactCopy}
-              zIndex={1}
-            >
-              <IconButton
-                tooltip="Copy"
-                tooltipPosition="left"
-                aria-label="Copy code"
-                onClick={handleCopy}
-                icon={copyIcon}
-                size="m"
-                variant="tertiary"
-              />
-            </Flex>
-          )}
         </Flex>
       )}
     </Flex>

@@ -232,7 +232,7 @@ export default function Home() {
               </Text>
             </InlineCode>
             <Heading wrap="balance" variant="display-default-l" align="center" marginBottom="16">
-              Test We let designers code and developers design
+              Test 3
             </Heading>
             <Button
               id="readDocs"
@@ -333,7 +333,7 @@ export default function Home() {
                   }}
                 />
                 <Logo wordmark={false} size="l" />
-                <Heading as="h3" variant="display-default-s" align="center">
+                <Heading as="h3" variant="display-default-s">
                   Welcome to Once UI
                 </Heading>
                 <Text onBackground="neutral-medium" marginBottom="24">

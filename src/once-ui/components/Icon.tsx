@@ -5,7 +5,7 @@ import classNames from "classnames";
 import { IconType } from "react-icons";
 import { iconLibrary } from "../icons";
 import { ColorScheme, ColorWeight } from "../types";
-import { Flex, Tooltip } from ".";
+import { Flex, Tooltip } from "@/once-ui/components";
 import styles from "./Icon.module.scss";
 import iconStyles from "./IconButton.module.scss";
 
@@ -77,7 +77,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
         inline
         fit
         position="relative"
-        as="span"
+        as="div"
         ref={ref}
         className={classNames(colorClass, styles.icon, styles[size])}
         role={decorative ? "presentation" : undefined}
