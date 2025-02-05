@@ -547,202 +547,6 @@ export default function Home() {
               </Row>
             </Column>
 
-            {/* Project Categories Section */}
-            <Column 
-              horizontal="center" 
-              paddingTop="104" 
-              fillWidth 
-              gap="64"
-              background="surface"
-              padding="80"
-              border="neutral-alpha-weak"
-              radius="xl"
-              position="relative"
-            >
-              <Background
-                mask={{
-                  x: 0,
-                  y: 0,
-                }}
-                position="absolute"
-                grid={{
-                  display: true,
-                  color: "neutral-alpha-medium",
-                  width: "2rem",
-                  height: "2rem",
-                  opacity: 20
-                }}
-              />
-
-              <Column gap="24" horizontal="center">
-                <Heading as="h2" variant="display-default-l" align="center">
-                  Project Categories
-                </Heading>
-                <Text 
-                  align="center" 
-                  variant="body-default-l" 
-                  onBackground="neutral-medium"
-                  style={{ maxWidth: '32rem' }}
-                >
-                  Browse projects by category to find inspiration or contribute to a cause you care about.
-                </Text>
-              </Column>
-
-              <Row wrap={true} gap="40" fillWidth maxWidth="xl">
-                {/* Education Card */}
-                <Card 
-                  key="education"
-                  padding="48" 
-                  fillWidth 
-                  background="surface"
-                  border="neutral-alpha-weak"
-                  radius="l"
-                  style={{ 
-                    flex: '1 1 calc(50% - 20px)',
-                    transition: 'box-shadow 0.2s ease-in-out'
-                  }}
-                  className="hover:shadow-lg"
-                >
-                  <Column gap="32">
-                    <Row horizontal="space-between" vertical="center">
-                      <Icon name="book" size="xl" onBackground="brand-strong" />
-                      <Button 
-                        variant="tertiary" 
-                        label="Browse Projects" 
-                        arrowIcon 
-                        size="s"
-                      />
-                    </Row>
-                    <Column gap="12">
-                      <Heading as="h3" variant="display-default-s">
-                        Education
-                      </Heading>
-                      <Text 
-                        variant="body-default-l"
-                        onBackground="neutral-medium"
-                      >
-                        Tools and platforms to enhance learning and teaching.
-                      </Text>
-                    </Column>
-                  </Column>
-                </Card>
-
-                {/* Healthcare Card */}
-                <Card 
-                  key="healthcare"
-                  padding="48" 
-                  fillWidth 
-                  background="surface"
-                  border="neutral-alpha-weak"
-                  radius="l"
-                  style={{ 
-                    flex: '1 1 calc(50% - 20px)',
-                    transition: 'box-shadow 0.2s ease-in-out'
-                  }}
-                  className="hover:shadow-lg"
-                >
-                  <Column gap="32">
-                    <Row horizontal="space-between" vertical="center">
-                      <Icon name="heart" size="xl" onBackground="brand-strong" />
-                      <Button 
-                        variant="tertiary" 
-                        label="Browse Projects" 
-                        arrowIcon 
-                        size="s"
-                      />
-                    </Row>
-                    <Column gap="12">
-                      <Heading as="h3" variant="display-default-s">
-                        Healthcare
-                      </Heading>
-                      <Text 
-                        variant="body-default-l"
-                        onBackground="neutral-medium"
-                      >
-                        Applications improving access to healthcare services.
-                      </Text>
-                    </Column>
-                  </Column>
-                </Card>
-
-                {/* Sustainability Card */}
-                <Card 
-                  key="sustainability"
-                  padding="48" 
-                  fillWidth 
-                  background="surface"
-                  border="neutral-alpha-weak"
-                  radius="l"
-                  style={{ 
-                    flex: '1 1 calc(50% - 20px)',
-                    transition: 'box-shadow 0.2s ease-in-out'
-                  }}
-                  className="hover:shadow-lg"
-                >
-                  <Column gap="32">
-                    <Row horizontal="space-between" vertical="center">
-                      <Icon name="leaf" size="xl" onBackground="brand-strong" />
-                      <Button 
-                        variant="tertiary" 
-                        label="Browse Projects" 
-                        arrowIcon 
-                        size="s"
-                      />
-                    </Row>
-                    <Column gap="12">
-                      <Heading as="h3" variant="display-default-s">
-                        Sustainability
-                      </Heading>
-                      <Text 
-                        variant="body-default-l"
-                        onBackground="neutral-medium"
-                      >
-                        Projects focused on environmental conservation and green living.
-                      </Text>
-                    </Column>
-                  </Column>
-                </Card>
-
-                {/* Community Card */}
-                <Card 
-                  key="community"
-                  padding="48" 
-                  fillWidth 
-                  background="surface"
-                  border="neutral-alpha-weak"
-                  radius="l"
-                  style={{ 
-                    flex: '1 1 calc(50% - 20px)',
-                    transition: 'box-shadow 0.2s ease-in-out'
-                  }}
-                  className="hover:shadow-lg"
-                >
-                  <Column gap="32">
-                    <Row horizontal="space-between" vertical="center">
-                      <Icon name="users" size="xl" onBackground="brand-strong" />
-                      <Button 
-                        variant="tertiary" 
-                        label="Browse Projects" 
-                        arrowIcon 
-                        size="s"
-                      />
-                    </Row>
-                    <Column gap="12">
-                      <Heading as="h3" variant="display-default-s">
-                        Community
-                      </Heading>
-                      <Text 
-                        variant="body-default-l"
-                        onBackground="neutral-medium"
-                      >
-                        Solutions addressing local challenges and fostering community engagement.
-                      </Text>
-                    </Column>
-                  </Column>
-                </Card>
-              </Row>
-            </Column>
-
             {/* Featured Projects Section */}
             <Column horizontal="center" paddingTop="104" fillWidth gap="48">
               <Column gap="24" horizontal="center">
@@ -755,303 +559,125 @@ export default function Home() {
                   onBackground="neutral-medium"
                   style={{ maxWidth: '36rem' }}
                 >
-                  Explore some of our community's most impactful projects
+                  Discover some of our community's most innovative projects
                 </Text>
               </Column>
 
-              <Row wrap={true} gap="32" fillWidth maxWidth="xl">
+              <Row 
+                wrap={true} 
+                gap="24" 
+                fillWidth 
+                maxWidth="xl"
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                }}
+              >
+                {/* Project 1 */}
                 <Card 
-                  padding="0" 
+                  padding="32" 
                   background="surface"
-                  style={{ 
-                    flex: '1 1 calc(50% - 16px)', 
-                    minWidth: '320px',
-                    transition: 'box-shadow 0.2s ease-in-out'
-                  }}
-                  className="hover:shadow-lg"
+                  style={{ transition: 'transform 0.2s ease-in-out' }}
+                  className="hover:shadow-lg hover:scale-102"
                 >
-                  <Column>
-                    <SmartImage
-                      src="/images/hackathon-platform.jpg"
-                      alt="Hackathon Platform Interface"
-                      width={600}
-                      height={300}
-                      isLoading={false}
-                      style={{ borderRadius: '12px 12px 0 0' }}
-                    />
-                    <Column padding="32" gap="16">
-                      <Row 
-                        gap="8" 
-                        vertical="center" 
-                        background="success-weak"
-                        padding="8"
-                        radius="full"
-                      >
-                        <Icon name="checkCircle" size="s" color="success" />
-                        <Text variant="body-strong-s">Active Project</Text>
-                      </Row>
-                      <Heading as="h3" variant="heading-default-m">
-                        Hackathon Platform
-                      </Heading>
-                      <Text onBackground="neutral-medium">
-                        An open-source platform for organizing and participating in coding competitions. 
-                        Features include team formation, project submission, and real-time collaboration.
-                      </Text>
-                      <Row gap="16" wrap={true}>
-                        <InlineCode>React</InlineCode>
-                        <InlineCode>Node.js</InlineCode>
-                        <InlineCode>MongoDB</InlineCode>
-                      </Row>
-                      <Row horizontal="space-between" vertical="center" marginTop="16">
-                        <AvatarGroup 
-                          size="s" 
-                          limit={3}
-                          avatars={[
-                            {
-                              title: "Sarah Chen",
-                              src: "/avatars/sarah.jpg"
-                            },
-                            {
-                              title: "Mike Ross",
-                              src: "/avatars/mike.jpg"
-                            },
-                            {
-                              title: "Alex Kim",
-                              src: "/avatars/alex.jpg"
-                            },
-                            {
-                              title: "Lisa Park",
-                              src: "/avatars/lisa.jpg"
-                            }
-                          ]}
-                        />
-                        <Button 
-                          variant="tertiary" 
-                          label="View Project"
-                          aria-label="View project details"
-                          arrowIcon 
-                          size="s"
-                        />
-                      </Row>
-                    </Column>
+                  <Column gap="16">
+                    <Icon name="code" size="xl" onBackground="brand-strong" />
+                    <Heading as="h3" variant="heading-default-m">
+                      EcoTracker
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      A mobile app that helps users track their carbon footprint and suggests eco-friendly alternatives for daily activities.
+                    </Text>
                   </Column>
                 </Card>
 
+                {/* Project 2 */}
                 <Card 
-                  padding="0" 
+                  padding="32" 
                   background="surface"
-                  style={{ 
-                    flex: '1 1 calc(50% - 16px)', 
-                    minWidth: '320px',
-                    transition: 'box-shadow 0.2s ease-in-out'
-                  }}
-                  className="hover:shadow-lg"
+                  style={{ transition: 'transform 0.2s ease-in-out' }}
+                  className="hover:shadow-lg hover:scale-102"
                 >
-                  <Column>
-                    <SmartImage
-                      src="/images/project-management.jpg"
-                      alt="Project Management Dashboard"
-                      width={600}
-                      height={300}
-                      isLoading={false}
-                      style={{ borderRadius: '12px 12px 0 0' }}
-                    />
-                    <Column padding="32" gap="16">
-                      <Row 
-                        gap="8" 
-                        vertical="center"
-                        background="warning-weak"
-                        padding="8"
-                        radius="full"
-                      >
-                        <Icon name="alertTriangle" size="s" color="warning" />
-                        <Text variant="body-strong-s">In Development</Text>
-                      </Row>
-                      <Heading as="h3" variant="heading-default-m">
-                        Project Management Tool
-                      </Heading>
-                      <Text onBackground="neutral-medium">
-                        A streamlined project tracking system designed for developer workflows. 
-                        Includes Kanban boards, time tracking, and GitHub integration.
-                      </Text>
-                      <Row gap="16" wrap={true}>
-                        <InlineCode>Vue.js</InlineCode>
-                        <InlineCode>Firebase</InlineCode>
-                        <InlineCode>GitHub API</InlineCode>
-                      </Row>
-                      <Row horizontal="space-between" vertical="center" marginTop="16">
-                        <AvatarGroup 
-                          size="s" 
-                          limit={3}
-                          avatars={[
-                            {
-                              title: "James Lee",
-                              src: "/avatars/james.jpg"
-                            },
-                            {
-                              title: "Emma Wilson",
-                              src: "/avatars/emma.jpg"
-                            },
-                            {
-                              title: "David Park",
-                              src: "/avatars/david.jpg"
-                            }
-                          ]}
-                        />
-                        <Button 
-                          variant="tertiary" 
-                          label="View Project"
-                          aria-label="View project details"
-                          arrowIcon 
-                          size="s"
-                        />
-                      </Row>
-                    </Column>
+                  <Column gap="16">
+                    <Icon name="brain" size="xl" onBackground="brand-strong" />
+                    <Heading as="h3" variant="heading-default-m">
+                      StudyBuddy AI
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      An AI-powered study assistant that creates personalized learning paths and interactive quizzes for students.
+                    </Text>
                   </Column>
                 </Card>
 
+                {/* Project 3 */}
                 <Card 
-                  padding="0" 
+                  padding="32" 
                   background="surface"
-                  style={{ 
-                    flex: '1 1 calc(50% - 16px)', 
-                    minWidth: '320px',
-                    transition: 'box-shadow 0.2s ease-in-out'
-                  }}
-                  className="hover:shadow-lg"
+                  style={{ transition: 'transform 0.2s ease-in-out' }}
+                  className="hover:shadow-lg hover:scale-102"
                 >
-                  <Column>
-                    <SmartImage
-                      src="/images/tech-meetup.jpg"
-                      alt="Tech Meetup Application"
-                      width={600}
-                      height={300}
-                      isLoading={false}
-                      style={{ borderRadius: '12px 12px 0 0' }}
-                    />
-                    <Column padding="32" gap="16">
-                      <Row 
-                        gap="8" 
-                        vertical="center" 
-                        background="success-weak"
-                        padding="8"
-                        radius="full"
-                      >
-                        <Icon name="checkCircle" size="s" color="success" />
-                        <Text variant="body-strong-s">Active Project</Text>
-                      </Row>
-                      <Heading as="h3" variant="heading-default-m">
-                        Tech Meetup App
-                      </Heading>
-                      <Text onBackground="neutral-medium">
-                        A community platform for organizing and discovering local tech events. 
-                        Features event creation, RSVP management, and location-based search.
-                      </Text>
-                      <Row gap="16" wrap={true}>
-                        <InlineCode>Next.js</InlineCode>
-                        <InlineCode>Prisma</InlineCode>
-                        <InlineCode>PostgreSQL</InlineCode>
-                      </Row>
-                      <Row horizontal="space-between" vertical="center" marginTop="16">
-                        <AvatarGroup 
-                          size="s" 
-                          limit={3}
-                          avatars={[
-                            {
-                              title: "Nina Rodriguez",
-                              src: "/avatars/nina.jpg"
-                            },
-                            {
-                              title: "Tom Chen",
-                              src: "/avatars/tom.jpg"
-                            },
-                            {
-                              title: "Sarah Kim",
-                              src: "/avatars/sarahk.jpg"
-                            }
-                          ]}
-                        />
-                        <Button 
-                          variant="tertiary" 
-                          label="View Project"
-                          aria-label="View project details"
-                          arrowIcon 
-                          size="s"
-                        />
-                      </Row>
-                    </Column>
+                  <Column gap="16">
+                    <Icon name="heart" size="xl" onBackground="brand-strong" />
+                    <Heading as="h3" variant="heading-default-m">
+                      HealthConnect
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      A telemedicine platform connecting rural communities with healthcare professionals for remote consultations.
+                    </Text>
                   </Column>
                 </Card>
 
+                {/* Project 4 */}
                 <Card 
-                  padding="0" 
+                  padding="32" 
                   background="surface"
-                  style={{ 
-                    flex: '1 1 calc(50% - 16px)', 
-                    minWidth: '320px',
-                    transition: 'box-shadow 0.2s ease-in-out'
-                  }}
-                  className="hover:shadow-lg"
+                  style={{ transition: 'transform 0.2s ease-in-out' }}
+                  className="hover:shadow-lg hover:scale-102"
                 >
-                  <Column>
-                    <SmartImage
-                      src="/images/cybersecurity.jpg"
-                      alt="Cybersecurity Training Platform"
-                      width={600}
-                      height={300}
-                      isLoading={false}
-                      style={{ borderRadius: '12px 12px 0 0' }}
-                    />
-                    <Column padding="32" gap="16">
-                      <Row 
-                        gap="8" 
-                        vertical="center"
-                        background="neutral-weak"
-                        padding="8"
-                        radius="full"
-                      >
-                        <Icon name="clock" size="s" color="neutral" />
-                        <Text variant="body-strong-s">Coming Soon</Text>
-                      </Row>
-                      <Heading as="h3" variant="heading-default-m">
-                        Cybersecurity Hub
-                      </Heading>
-                      <Text onBackground="neutral-medium">
-                        An interactive learning platform for cybersecurity education. 
-                        Includes CTF challenges, security labs, and certification prep.
-                      </Text>
-                      <Row gap="16" wrap={true}>
-                        <InlineCode>Python</InlineCode>
-                        <InlineCode>Docker</InlineCode>
-                        <InlineCode>AWS</InlineCode>
-                      </Row>
-                      <Row horizontal="space-between" vertical="center" marginTop="16">
-                        <AvatarGroup 
-                          size="s" 
-                          limit={3}
-                          avatars={[
-                            {
-                              title: "Marcus Johnson",
-                              src: "/avatars/marcus.jpg"
-                            },
-                            {
-                              title: "Priya Patel",
-                              src: "/avatars/priya.jpg"
-                            },
-                            {
-                              title: "Chris Wong",
-                              src: "/avatars/chris.jpg"
-                            }
-                          ]}
-                        />
-                        <Button 
-                          variant="tertiary" 
-                          label="Join Waitlist"
-                          arrowIcon 
-                          size="s"
-                        />
-                      </Row>
-                    </Column>
+                  <Column gap="16">
+                    <Icon name="users" size="xl" onBackground="brand-strong" />
+                    <Heading as="h3" variant="heading-default-m">
+                      CommunityHub
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      A platform for organizing local volunteer initiatives and connecting helpers with those in need.
+                    </Text>
+                  </Column>
+                </Card>
+
+                {/* Project 5 */}
+                <Card 
+                  padding="32" 
+                  background="surface"
+                  style={{ transition: 'transform 0.2s ease-in-out' }}
+                  className="hover:shadow-lg hover:scale-102"
+                >
+                  <Column gap="16">
+                    <Icon name="book" size="xl" onBackground="brand-strong" />
+                    <Heading as="h3" variant="heading-default-m">
+                      LearnLingo
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      An interactive language learning app featuring AI-powered conversation practice and cultural exchange.
+                    </Text>
+                  </Column>
+                </Card>
+
+                {/* Project 6 */}
+                <Card 
+                  padding="32" 
+                  background="surface"
+                  style={{ transition: 'transform 0.2s ease-in-out' }}
+                  className="hover:shadow-lg hover:scale-102"
+                >
+                  <Column gap="16">
+                    <Icon name="leaf" size="xl" onBackground="brand-strong" />
+                    <Heading as="h3" variant="heading-default-m">
+                      SmartFarm
+                    </Heading>
+                    <Text onBackground="neutral-medium">
+                      An IoT solution for sustainable agriculture, monitoring crop health and optimizing resource usage.
+                    </Text>
                   </Column>
                 </Card>
               </Row>
@@ -1063,24 +689,182 @@ export default function Home() {
                 What Our Community Says
               </Heading>
 
-              <Row wrap={true} gap="32" fillWidth>
-                <Card padding="32" fillWidth>
-                  <Column gap="16">
-                    <Text onBackground="neutral-medium" style={{ fontStyle: 'italic' }}>
-                      "Deta gave me the skills and confidence to build my first app. The community support was incredible!"
+              <Row 
+                wrap={true} 
+                gap="24" 
+                fillWidth 
+                maxWidth="xl"
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(6, 1fr)',
+                  overflowX: 'auto'
+                }}
+              >
+                {/* Testimonial 1 */}
+                <Card 
+                  padding="24" 
+                  background="surface"
+                  radius="xl"
+                  style={{ 
+                    minWidth: '240px',
+                    transition: 'transform 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column gap="12">
+                    <Icon name="quote" size="m" onBackground="brand-strong" />
+                    <Text 
+                      onBackground="neutral-medium" 
+                      style={{ 
+                        fontStyle: 'italic',
+                        fontSize: '0.9rem',
+                        lineHeight: '1.5'
+                      }}
+                    >
+                      "Deta gave me the skills and confidence to build my first app. The supportive community made learning to code an amazing journey!"
                     </Text>
-                    <Text variant="body-strong-m">Sarah T.</Text>
-                    <Text variant="body-default-s" onBackground="neutral-medium">Student</Text>
+                    <Text variant="body-strong-s">Sarah T.</Text>
+                    <Text variant="body-default-xs" onBackground="neutral-medium">Student</Text>
                   </Column>
                 </Card>
 
-                <Card padding="32" fillWidth>
-                  <Column gap="16">
-                    <Text onBackground="neutral-medium" style={{ fontStyle: 'italic' }}>
-                      "I transitioned into a tech career thanks to Deta's resources and mentorship programs."
+                {/* Testimonial 2 */}
+                <Card 
+                  padding="24" 
+                  background="surface"
+                  radius="xl"
+                  style={{ 
+                    minWidth: '240px',
+                    transition: 'transform 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column gap="12">
+                    <Icon name="quote" size="m" onBackground="brand-strong" />
+                    <Text 
+                      onBackground="neutral-medium" 
+                      style={{ 
+                        fontStyle: 'italic',
+                        fontSize: '0.9rem',
+                        lineHeight: '1.5'
+                      }}
+                    >
+                      "I transitioned into tech thanks to Deta's resources and mentorship. The hands-on projects were invaluable."
                     </Text>
-                    <Text variant="body-strong-m">James L.</Text>
-                    <Text variant="body-default-s" onBackground="neutral-medium">Software Developer</Text>
+                    <Text variant="body-strong-s">James L.</Text>
+                    <Text variant="body-default-xs" onBackground="neutral-medium">Software Developer</Text>
+                  </Column>
+                </Card>
+
+                {/* Testimonial 3 */}
+                <Card 
+                  padding="24" 
+                  background="surface"
+                  radius="xl"
+                  style={{ 
+                    minWidth: '240px',
+                    transition: 'transform 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column gap="12">
+                    <Icon name="quote" size="m" onBackground="brand-strong" />
+                    <Text 
+                      onBackground="neutral-medium" 
+                      style={{ 
+                        fontStyle: 'italic',
+                        fontSize: '0.9rem',
+                        lineHeight: '1.5'
+                      }}
+                    >
+                      "Project-based learning helped me grasp complex concepts. The real-world applications made everything click."
+                    </Text>
+                    <Text variant="body-strong-s">Elena R.</Text>
+                    <Text variant="body-default-xs" onBackground="neutral-medium">Data Scientist</Text>
+                  </Column>
+                </Card>
+
+                {/* Testimonial 4 */}
+                <Card 
+                  padding="24" 
+                  background="surface"
+                  radius="xl"
+                  style={{ 
+                    minWidth: '240px',
+                    transition: 'transform 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column gap="12">
+                    <Icon name="quote" size="m" onBackground="brand-strong" />
+                    <Text 
+                      onBackground="neutral-medium" 
+                      style={{ 
+                        fontStyle: 'italic',
+                        fontSize: '0.9rem',
+                        lineHeight: '1.5'
+                      }}
+                    >
+                      "The community provided the guidance I needed. Their feedback and support were instrumental in my growth."
+                    </Text>
+                    <Text variant="body-strong-s">Michael K.</Text>
+                    <Text variant="body-default-xs" onBackground="neutral-medium">Frontend Developer</Text>
+                  </Column>
+                </Card>
+
+                {/* Testimonial 5 */}
+                <Card 
+                  padding="24" 
+                  background="surface"
+                  radius="xl"
+                  style={{ 
+                    minWidth: '240px',
+                    transition: 'transform 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column gap="12">
+                    <Icon name="quote" size="m" onBackground="brand-strong" />
+                    <Text 
+                      onBackground="neutral-medium" 
+                      style={{ 
+                        fontStyle: 'italic',
+                        fontSize: '0.9rem',
+                        lineHeight: '1.5'
+                      }}
+                    >
+                      "The diverse community helped me grow professionally. I learned so much from collaborating with others."
+                    </Text>
+                    <Text variant="body-strong-s">Priya M.</Text>
+                    <Text variant="body-default-xs" onBackground="neutral-medium">Full Stack Engineer</Text>
+                  </Column>
+                </Card>
+
+                {/* Testimonial 6 */}
+                <Card 
+                  padding="24" 
+                  background="surface"
+                  radius="xl"
+                  style={{ 
+                    minWidth: '240px',
+                    transition: 'transform 0.2s ease-in-out'
+                  }}
+                  className="hover:shadow-lg"
+                >
+                  <Column gap="12">
+                    <Icon name="quote" size="m" onBackground="brand-strong" />
+                    <Text 
+                      onBackground="neutral-medium" 
+                      style={{ 
+                        fontStyle: 'italic',
+                        fontSize: '0.9rem',
+                        lineHeight: '1.5'
+                      }}
+                    >
+                      "Real-world projects helped me land my dream job. The practical experience was exactly what employers wanted."
+                    </Text>
+                    <Text variant="body-strong-s">David W.</Text>
+                    <Text variant="body-default-xs" onBackground="neutral-medium">Backend Developer</Text>
                   </Column>
                 </Card>
               </Row>
@@ -1124,12 +908,6 @@ export default function Home() {
                   icon="linkedin"
                   variant="tertiary"
                   tooltip="LinkedIn"
-                />
-                <IconButton
-                  href="https://github.com"
-                  icon="github"
-                  variant="tertiary"
-                  tooltip="GitHub"
                 />
               </Row>
             </Column>
