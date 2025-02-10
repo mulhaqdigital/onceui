@@ -242,7 +242,7 @@ export default function Home() {
               align="center" 
               marginBottom="16"
             >
-              Empowering the Next Generation of Coders and Innovators Test 
+              Empowering the Next Generation of Coders and Innovators 2
             </Heading>
 
             <Text 
